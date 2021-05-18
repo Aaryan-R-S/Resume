@@ -43,6 +43,27 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[default]{lato}
+\usepackage{tikz}
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
 
 % If using xelatex or lualatex:
 % \setmainfont{Lato}
@@ -66,17 +87,17 @@
 \usepackage[colorlinks]{hyperref}
 
 \begin{document}
-\definecolor{coolblack}{rgb}{0.0, 0.18, 0.18}
+\definecolor{coolblack}{rgb}{0.0, 0.10, 0.14}
 \name{Aaryan Raj Saxena}
-\tagline{Computer Science Graduate, IIIT Delhi}
+\tagline{Computer Science Undergraduate, IIIT Delhi}
 % \photo{2.8cm}{Globe_High}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{aaryan20004@iiitd.ac.in}
-  \phone{+91-9818481187}
+  \email{\color{black}{aaryan20004@iiitd.ac.in}}
+  \phone{\color{black}{+91-9818481187}}
 %  \mailaddress{Address, Street, 00000 County}
-  \location{New Delhi, India}
+  \href{https://goo.gl/maps/TWmoBrRu9JgPqRYR8}{\location{\color{black}{New Delhi, India}}}
   \href{https://aaryan-r-s.github.io/Portfolio}{\homepage{\color{black}{Portfolio}}}
 %  \twitter{@marissamayer}
   \href{https://www.linkedin.com/in/aaryan-raj-saxena-7016a1212}{\linkedin{\color{black}{LinkedIn}}}
@@ -106,20 +127,16 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{PHP Developer Intern}{Mehaar Technologies}{May 2018 -- Jun 2018}{}
+\cvevent{\color{black}{Software Development Intern}}{Company Name \hspace{0.02cm}\href{https://www.microsoft.com/en-in}{\color{coolblack}{\ExternalLink}} }{May 202X -- Jun 202X}{}
 \begin{itemize}
-\item Designed a hostel management system based on the OTP message for a hostel with student registration and his total time away.
-\item Developed an full fledged working implementation beneficial for the hostel students.
-
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 \end{itemize}
 
 \divider
 
-\cvevent{Front End Developer Intern}{Meghna Plastics}{Jun 2018 }{}
+    \cvevent{\color{black}{Front End Development Intern}}{Company Name \hspace{0.02cm}\href{https://www.microsoft.com/en-in}{\color{coolblack}{\ExternalLink}} }{June 202X -- November 202X }{}
 \begin{itemize}
-\item Designed and developed a plumping website using Bootstrap 4 with a very responsive and clean UI and descent User Experience.
-
-\item  After publishing the website to the users, the customer base grew by 60\% in the subsequent month.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 \end{itemize}
 
 
@@ -136,41 +153,38 @@
 \cvsection{Projects}
 
 
-\cvevent{Blog Website (Content Management System)}
-{\MakeLowercase{PHP, HTML, CSS, BOOTSTRAP, jQUERY}}{December 2018 --  January 2018}{}\begin{itemize}
-\item  Basic Login, Register functionality \& Users can post blogs. 
-\item While admin can manage posts, users, categories, comments.
+\cvevent{Hows That - Cricket Fantasy App}
+{\MakeLowercase{html, Bootstrap, jquery, Python, requests, flask, gspread}}{November 2020 -- December 2020}{}
+\begin{itemize}
+\item Developed a fantasy Cricket team Site named How's That using python flask module, pyhton gspread module and Cric-api.
+\item Links: \hspace{0.5cm}{{\href{https://github.com/Aaryan-R-S/Web-Projects-Hows-That}{\github{\color{black}{GiHub}}}} {\href{https://hows-that-aaryanars.herokuapp.com/}{\homepage{\color{black}{Link}}}}}
 \end{itemize}
-\medskip
 \divider
 
-\cvevent{Blood Bank (Academic Project)}
-{\MakeLowercase{PHP, HTML, CSS, BOOTSTRAP, jQUERY}}{March 2018 -- May 2018}{}
+\cvevent{Ping Pong Game}
+{\MakeLowercase{HTML, CSS, JavaScript, Git}}{September 2020 -- October 2020}{}
 \begin{itemize}
-\item  Donors can view the upcoming Blood Camps \& donate blood.
-\item Seekers can search for donors on basis of City \& Blood Type.
-\item Admin manages all users and manages the Blood Stock.
+\item Developed a Ping Pong game using pure HTML Canvas and served as a static webpage using GitHub pages.
+\item Links: \hspace{0.5cm}{{\href{https://github.com/Aaryan-R-S/Canvas-Projects-Ping-Pong}{\github{\color{black}{GiHub}}}} {\href{https://aaryan-r-s.github.io/Canvas-Projects-Ping-Pong}{\homepage{\color{black}{Link}}}}}
 \end{itemize}
-\medskip
 \divider
 
-\cvevent{ChatBots }
-{\MakeLowercase{DIALOGFLOW, FACEBOOK PAGE, PYTHON, FLASK, HEROKU}}{March 2019 -- March 2019}{}
+\cvevent{Web Portfolio}
+{\MakeLowercase{HTML, CSS, jQuery, Bootstrap, AngularJS, Git}}{April 2021 -- May 2021}{}
 \begin{itemize}
-\item Developed a ChatBot using the DialogFlow based on the Sentimental analysis of the Sentence.
-\item Deployed it live on Facebook Page and the hosted the backend service on Heroku.
+\item Developed a Web Portfolio for myself using AngularJS based on component-specific requirements for the app and published it to the GitHub pages as static webpage.
+\item Links: \hspace{0.5cm}{{\href{https://github.com/Aaryan-R-S/Portfolio}{\github{\color{black}{GiHub}}}} {\href{https://aaryan-r-s.github.io/Portfolio}{\homepage{\color{black}{Link}}}}}
 \end{itemize}
-\medskip
 \divider
 
 
 
-\cvevent{Real Time Chat Application}
-{\MakeLowercase{MONGO, EXPRESS, NODE, SOCKET.IO, PUG}}{September 2018 -- September 2018}{}
+\cvevent{Postman Clone}
+{\MakeLowercase{HTML, Bootstrap, javaScript fetch api, Git}}{October 2020 -- November 2020}{}
 \begin{itemize}
-\item Developed a real time chat application where the users can create their Username \& start chatting with the other people in the chat room.
+\item Developed a Postman Clone Website using JavaScript Fetch API.
+\item Links: \hspace{0.5cm}{{\href{https://github.com/Aaryan-R-S/Web-Projects-Postman-Clone}{\github{\color{black}{GiHub}}}} {\href{https://aaryan-r-s.github.io/Web-Projects-Postman-Clone}{\homepage{\color{black}{Link}}}}}
 \end{itemize}
-\medskip
 \divider
 
 
